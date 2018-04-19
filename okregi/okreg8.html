@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wybory Prezydenta Rzeczypospolitej Polskiej 2000</title>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="apple-touch-icon" href="../icon.png">
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load("current", {packages: ["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Kandydat', 'Wynik'],
+                ['GRABOWSKI Dariusz', 2205],
+                ['IKONOWICZ Piotr', 924],
+                ['KALINOWSKI Jarosław', 36969],
+                ['KORWIN-MIKKE Janusz', 6361],
+                ['KRZAKLEWSKI Marian', 60408],
+                ['KWAŚNIEWSKI Aleksander', 144888],
+                ['LEPPER Andrzej', 13221],
+                ['ŁOPUSZAŃSKI Jan', 4474],
+                ['OLECHOWSKI Andrzej', 53166],
+                ['PAWŁOWSKI Bogdan', 425],
+                ['WAŁĘSA Lech', 3135],
+                ['WILECKI Tadeusz', 870]
+                ]);
+
+            var options = {
+                sliceVisibilityThreshold: 0,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+<body>
+
+<nav>
+    <ul class="topnav">
+        <li><a href="../index.html">Polska</a></li>
+        <li><a href="#">&#47;</a></li>
+        <li><a href="../wojewodztwa/lubelskie.html">lubelskie</a></li>
+        <li><a href="#">&#47;</a></li>
+        <li><a class="active" href=#>Okręg nr 8</a></li>
+        <li class="right"><a href="#about">Informacje</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <section>
+        <h2>Procentowa liczba głosów oddanych na kandydatów</h2>
+        <div id="piechart" style="width: inherit; height: 500px; margin: auto"></div>
+    </section>
+
+    <hr>
+
+    <section style="padding-bottom: 5em">
+        <h2>Wyniki poszczególnych kandydatów</h2>
+        <table>
+            <tr>
+                <th>Kandydat</th>
+                <th>Liczba głosów oddanych na kandydata</th>
+                <th>Procentowa liczba głosów oddanych na kandydata</th>
+            </tr>
+            <tr>
+                <td>GRABOWSKI Dariusz</td>
+                <td>2205</td>
+                <td>0.67%</td>
+            </tr>
+            <tr>
+                <td>IKONOWICZ Piotr</td>
+                <td>924</td>
+                <td>0.27%</td>
+            </tr>
+            <tr>
+                <td>KALINOWSKI Jarosław</td>
+                <td>36969</td>
+                <td>11.3%</td
+            </tr>
+            <tr>
+                <td>KORWIN-MIKKE Janusz</td>
+                <td>6361</td>
+                <td>1.94%</td>
+            </tr>
+            <tr>
+                <td>KRZAKLEWSKI Marian</td>
+                <td>60408</td>
+                <td>18.4%</td>
+            </tr>
+            <tr>
+                <td>KWAŚNIEWSKI Aleksander</td>
+                <td>144888</td>
+                <td>44.3%</td>
+            </tr>
+            <tr>
+                <td>LEPPER Andrzej</td>
+                <td>13221</td>
+                <td>4.04%</td>
+            </tr>
+            <tr>
+                <td>ŁOPUSZAŃSKI Jan</td>
+                <td>4474</td>
+                <td>1.37%</td>
+            </tr>
+            <tr>
+                <td>OLECHOWSKI Andrzej</td>
+                <td>53166</td>
+                <td>16.2%</td>
+            </tr>
+            <tr>
+                <td>PAWŁOWSKI Bogdan</td>
+                <td>425</td>
+                <td>0.13%</td>
+            </tr>
+            <tr>
+                <td>WAŁĘSA Lech</td>
+                <td>3135</td>
+                <td>0.96%</td>
+            </tr>
+            <tr>
+                <td>WILECKI Tadeusz</td>
+                <td>870</td>
+                <td>0.27%</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Powiaty</h2>
+        <ul class="flex-container">
+            
+            <li class="flex-item"><a href="../powiaty/powiat7.html">Powiat nr 7</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat11.html">Powiat nr 11</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat6.html">Powiat nr 6</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat12.html">Powiat nr 12</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat10.html">Powiat nr 10</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat8.html">Powiat nr 8</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat4.html">Powiat nr 4</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat3.html">Powiat nr 3</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat9.html">Powiat nr 9</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat5.html">Powiat nr 5</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat190.html">Powiat nr 190</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat14.html">Powiat nr 14</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat22.html">Powiat nr 22</a></li>
+            
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p class="footerParagraph">Wybory prezydenckie 2000 - projekt zaliczeniowy Aplikacje WWW 2017/18</p>
+    <p class="footerParagraph">- Marcin Byra, marcin.byra1@gmail.com</p>
+</footer>
+
+
+</body>
+</html>

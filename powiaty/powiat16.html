@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wybory Prezydenta Rzeczypospolitej Polskiej 2000</title>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="apple-touch-icon" href="../icon.png">
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load("current", {packages: ["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Kandydat', 'Wynik'],
+                ['GRABOWSKI Dariusz', 1259 ],
+                ['IKONOWICZ Piotr', 461],
+                ['KALINOWSKI Jarosław', 10429],
+                ['KORWIN-MIKKE Janusz', 3205],
+                ['KRZAKLEWSKI Marian', 34072],
+                ['KWAŚNIEWSKI Aleksander', 125482],
+                ['LEPPER Andrzej', 5443],
+                ['ŁOPUSZAŃSKI Jan', 1856],
+                ['OLECHOWSKI Andrzej', 39346],
+                ['PAWŁOWSKI Bogdan', 240],
+                ['WAŁĘSA Lech', 1913],
+                ['WILECKI Tadeusz', 353]
+                ]);
+
+            var options = {
+                sliceVisibilityThreshold: 0,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+<body>
+
+<nav>
+    <ul class="topnav">
+        <li><a href="../index.html">Polska</a></li>
+        <li><a href="#">&#47;</a></li>
+        <li><a href="../wojewodztwa/zachodniopomorskie.html">zachodniopomorskie</a></li>
+        <li><a href="#">&#47;</a></li>
+        <li><a href="../okregi/67.html">Okręg nr 67</a></li>
+        <li><a href="#">&#47;</a></li>
+        <li><a class="active" href="#">Powiat nr 16</a></li>
+        <li class="right"><a href="#about">Informacje</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <section>
+        <h2>Procentowa liczba głosów oddanych na kandydatów</h2>
+        <div id="piechart" style="width: inherit; height: 500px; margin: auto"></div>
+    </section>
+
+    <hr>
+
+    <section style="padding-bottom: 5em">
+        <h2>Wyniki poszczególnych kandydatów</h2>
+        <table>
+            <tr>
+                <th>Kandydat</th>
+                <th>Liczba głosów oddanych na kandydata</th>
+                <th>Procentowa liczba głosów oddanych na kandydata</th>
+            </tr>
+            <tr>
+                <td>GRABOWSKI Dariusz</td>
+                <td>1259</td>
+                <td>0.55%</td>
+            </tr>
+            <tr>
+                <td>IKONOWICZ Piotr</td>
+                <td>461</td>
+                <td>0.21%</td>
+            </tr>
+            <tr>
+                <td>KALINOWSKI Jarosław</td>
+                <td>10429</td>
+                <td>4.65%</td
+            </tr>
+            <tr>
+                <td>KORWIN-MIKKE Janusz</td>
+                <td>3205</td>
+                <td>1.43%</td>
+            </tr>
+            <tr>
+                <td>KRZAKLEWSKI Marian</td>
+                <td>34072</td>
+                <td>15.2%</td>
+            </tr>
+            <tr>
+                <td>KWAŚNIEWSKI Aleksander</td>
+                <td>125482</td>
+                <td>56.0%</td>
+            </tr>
+            <tr>
+                <td>LEPPER Andrzej</td>
+                <td>5443</td>
+                <td>2.42%</td>
+            </tr>
+            <tr>
+                <td>ŁOPUSZAŃSKI Jan</td>
+                <td>1856</td>
+                <td>0.83%</td>
+            </tr>
+            <tr>
+                <td>OLECHOWSKI Andrzej</td>
+                <td>39346</td>
+                <td>17.5%</td>
+            </tr>
+            <tr>
+                <td>PAWŁOWSKI Bogdan</td>
+                <td>240</td>
+                <td>0.11%</td>
+            </tr>
+            <tr>
+                <td>WAŁĘSA Lech</td>
+                <td>1913</td>
+                <td>0.85%</td>
+            </tr>
+            <tr>
+                <td>WILECKI Tadeusz</td>
+                <td>353</td>
+                <td>0.16%</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Gminy</h2>
+        <ul class="flex-container">
+            
+            <li class="flex-item"><a href=#>Gryfino</a></li>
+            
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p class="footerParagraph">Wybory prezydenckie 2000 - projekt zaliczeniowy Aplikacje WWW 2017/18</p>
+    <p class="footerParagraph">- Marcin Byra, marcin.byra1@gmail.com</p>
+</footer>
+
+
+</body>
+</html>

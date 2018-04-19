@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wybory Prezydenta Rzeczypospolitej Polskiej 2000</title>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="apple-touch-icon" href="../icon.png">
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load("current", {packages: ["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Kandydat', 'Wynik'],
+                ['GRABOWSKI Dariusz', 1627],
+                ['IKONOWICZ Piotr', 687],
+                ['KALINOWSKI Jarosław', 5377],
+                ['KORWIN-MIKKE Janusz', 6434],
+                ['KRZAKLEWSKI Marian', 42249],
+                ['KWAŚNIEWSKI Aleksander', 199367],
+                ['LEPPER Andrzej', 6204],
+                ['ŁOPUSZAŃSKI Jan', 1758],
+                ['OLECHOWSKI Andrzej', 67032],
+                ['PAWŁOWSKI Bogdan', 318],
+                ['WAŁĘSA Lech', 3141],
+                ['WILECKI Tadeusz', 459]
+                ]);
+
+            var options = {
+                sliceVisibilityThreshold: 0,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+<body>
+
+<nav>
+    <ul class="topnav">
+        <li><a href="../index.html">Polska</a></li>
+        <li><a href="#">&#47;</a></li>
+        <li><a href="../wojewodztwa/zachodniopomorskie.html">zachodniopomorskie</a></li>
+        <li><a href="#">&#47;</a></li>
+        <li><a class="active" href=#>Okręg nr 65</a></li>
+        <li class="right"><a href="#about">Informacje</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <section>
+        <h2>Procentowa liczba głosów oddanych na kandydatów</h2>
+        <div id="piechart" style="width: inherit; height: 500px; margin: auto"></div>
+    </section>
+
+    <hr>
+
+    <section style="padding-bottom: 5em">
+        <h2>Wyniki poszczególnych kandydatów</h2>
+        <table>
+            <tr>
+                <th>Kandydat</th>
+                <th>Liczba głosów oddanych na kandydata</th>
+                <th>Procentowa liczba głosów oddanych na kandydata</th>
+            </tr>
+            <tr>
+                <td>GRABOWSKI Dariusz</td>
+                <td>1627</td>
+                <td>0.49%</td>
+            </tr>
+            <tr>
+                <td>IKONOWICZ Piotr</td>
+                <td>687</td>
+                <td>0.21%</td>
+            </tr>
+            <tr>
+                <td>KALINOWSKI Jarosław</td>
+                <td>5377</td>
+                <td>1.60%</td
+            </tr>
+            <tr>
+                <td>KORWIN-MIKKE Janusz</td>
+                <td>6434</td>
+                <td>1.92%</td>
+            </tr>
+            <tr>
+                <td>KRZAKLEWSKI Marian</td>
+                <td>42249</td>
+                <td>12.6%</td>
+            </tr>
+            <tr>
+                <td>KWAŚNIEWSKI Aleksander</td>
+                <td>199367</td>
+                <td>59.5%</td>
+            </tr>
+            <tr>
+                <td>LEPPER Andrzej</td>
+                <td>6204</td>
+                <td>1.84%</td>
+            </tr>
+            <tr>
+                <td>ŁOPUSZAŃSKI Jan</td>
+                <td>1758</td>
+                <td>0.53%</td>
+            </tr>
+            <tr>
+                <td>OLECHOWSKI Andrzej</td>
+                <td>67032</td>
+                <td>20.0%</td>
+            </tr>
+            <tr>
+                <td>PAWŁOWSKI Bogdan</td>
+                <td>318</td>
+                <td>0.1%</td>
+            </tr>
+            <tr>
+                <td>WAŁĘSA Lech</td>
+                <td>3141</td>
+                <td>0.94%</td>
+            </tr>
+            <tr>
+                <td>WILECKI Tadeusz</td>
+                <td>459</td>
+                <td>0.13%</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Powiaty</h2>
+        <ul class="flex-container">
+            
+            <li class="flex-item"><a href="../powiaty/powiat2.html">Powiat nr 2</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat3.html">Powiat nr 3</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat4.html">Powiat nr 4</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat17.html">Powiat nr 17</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat14.html">Powiat nr 14</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat12.html">Powiat nr 12</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat8.html">Powiat nr 8</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat21.html">Powiat nr 21</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat5.html">Powiat nr 5</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat55.html">Powiat nr 55</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat191.html">Powiat nr 191</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat24.html">Powiat nr 24</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat10.html">Powiat nr 10</a></li>
+            
+            <li class="flex-item"><a href="../powiaty/powiat11.html">Powiat nr 11</a></li>
+            
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p class="footerParagraph">Wybory prezydenckie 2000 - projekt zaliczeniowy Aplikacje WWW 2017/18</p>
+    <p class="footerParagraph">- Marcin Byra, marcin.byra1@gmail.com</p>
+</footer>
+
+
+</body>
+</html>

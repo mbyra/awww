@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wybory Prezydenta Rzeczypospolitej Polskiej 2000</title>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="apple-touch-icon" href="../icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load("current", {packages: ["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Kandydat', 'Wynik'],
+                ['GRABOWSKI Dariusz', 12842 ],
+                ['IKONOWICZ Piotr', 5695],
+                ['KALINOWSKI Jarosław', 192056],
+                ['KORWIN-MIKKE Janusz', 41642],
+                ['KRZAKLEWSKI Marian', 417095],
+                ['KWAŚNIEWSKI Aleksander', 1105930],
+                ['LEPPER Andrzej', 62570],
+                ['ŁOPUSZAŃSKI Jan', 28342],
+                ['OLECHOWSKI Andrzej', 497589],
+                ['PAWŁOWSKI Bogdan', 3150],
+                ['WAŁĘSA Lech', 26160],
+                ['WILECKI Tadeusz', 4030]
+            ]);
+
+            var options = {
+                sliceVisibilityThreshold: 0,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+<body>
+
+<nav>
+    <ul class="topnav">
+        <li><a href="../index.html">Polska</a></li>
+        <li><a href="#">&#47;</a></li>
+        <li><a class="active" href="#news">mazowieckie</a></li>
+        <li class="right"><a href="#about">Informacje</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <section>
+        <h2>Procentowa liczba głosów oddanych na kandydatów</h2>
+        <div id="piechart" style="width: inherit; height: 500px; margin: auto"></div>
+    </section>
+
+    <hr>
+
+    <section style="padding-bottom: 5em">
+        <h2>Wyniki poszczególnych kandydatów</h2>
+        <table>
+            <tr>
+                <th>Kandydat</th>
+                <th>Liczba głosów oddanych na kandydata</th>
+                <th>Procentowa liczba głosów oddanych na kandydata</th>
+            </tr>
+            <tr>
+                <td>GRABOWSKI Dariusz</td>
+                <td>12842</td>
+                <td>0.54%</td>
+            </tr>
+            <tr>
+                <td>IKONOWICZ Piotr</td>
+                <td>5695</td>
+                <td>0.24%</td>
+            </tr>
+            <tr>
+                <td>KALINOWSKI Jarosław</td>
+                <td>192056</td>
+                <td>8.01%</td
+            </tr>
+            <tr>
+                <td>KORWIN-MIKKE Janusz</td>
+                <td>41642</td>
+                <td>1.73%</td>
+            </tr>
+            <tr>
+                <td>KRZAKLEWSKI Marian</td>
+                <td>417095</td>
+                <td>17.4%</td>
+            </tr>
+            <tr>
+                <td>KWAŚNIEWSKI Aleksander</td>
+                <td>1105930</td>
+                <td>46.1%</td>
+            </tr>
+            <tr>
+                <td>LEPPER Andrzej</td>
+                <td>62570</td>
+                <td>2.61%</td>
+            </tr>
+            <tr>
+                <td>ŁOPUSZAŃSKI Jan</td>
+                <td>28342</td>
+                <td>1.18%</td>
+            </tr>
+            <tr>
+                <td>OLECHOWSKI Andrzej</td>
+                <td>497589</td>
+                <td>20.7%</td>
+            </tr>
+            <tr>
+                <td>PAWŁOWSKI Bogdan</td>
+                <td>3150</td>
+                <td>0.13%</td>
+            </tr>
+            <tr>
+                <td>WAŁĘSA Lech</td>
+                <td>26160</td>
+                <td>1.09%</td>
+            </tr>
+            <tr>
+                <td>WILECKI Tadeusz</td>
+                <td>4030</td>
+                <td>0.16%</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Okręgi</h2>
+        <ul class="flex-container" >
+            
+            <li class="flex-item"><a href="../okregi/okreg28.html">Okręg nr 28</a></li>
+            
+            <li class="flex-item"><a href="../okregi/okreg29.html">Okręg nr 29</a></li>
+            
+            <li class="flex-item"><a href="../okregi/okreg30.html">Okręg nr 30</a></li>
+            
+            <li class="flex-item"><a href="../okregi/okreg31.html">Okręg nr 31</a></li>
+            
+            <li class="flex-item"><a href="../okregi/okreg32.html">Okręg nr 32</a></li>
+            
+            <li class="flex-item"><a href="../okregi/okreg33.html">Okręg nr 33</a></li>
+            
+            <li class="flex-item"><a href="../okregi/okreg34.html">Okręg nr 34</a></li>
+            
+            <li class="flex-item"><a href="../okregi/okreg35.html">Okręg nr 35</a></li>
+            
+            <li class="flex-item"><a href="../okregi/okreg36.html">Okręg nr 36</a></li>
+            
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p class="footerParagraph">Wybory prezydenckie 2000 - projekt zaliczeniowy Aplikacje WWW 2017/18</p>
+    <p class="footerParagraph">- Marcin Byra, marcin.byra1@gmail.com</p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html class="no-js" lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Wybory Prezydenta Rzeczypospolitej Polskiej 2000</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load("current", {packages: ["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Kandydat', 'Wynik'],
+                ['GRABOWSKI Dariusz', 89002],
+                ['IKONOWICZ Piotr', 38672],
+                ['KALINOWSKI Jarosław', 1047949],
+                ['KORWIN-MIKKE Janusz', 252499],
+                ['KRZAKLEWSKI Marian', 2739621],
+                ['KWAŚNIEWSKI Aleksander', 9485224],
+                ['LEPPER Andrzej', 537570],
+                ['ŁOPUSZAŃSKI Jan', 139682],
+                ['OLECHOWSKI Andrzej', 3044141],
+                ['PAWŁOWSKI Bogdan', 17164],
+                ['WAŁĘSA Lech', 178590],
+                ['WILECKI Tadeusz', 28805]
+            ]);
+
+            var options = {
+                sliceVisibilityThreshold: 0,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script>
+        google.charts.load('current', {
+            'packages': ['geochart'],
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+                ['województwo', 'frekwencja'],
+                ['dolnośląskie', 60.60],
+                ['kujawsko-pomorskie', 62.08],
+                ['lubelskie', 59.04],
+                ['lubuskie', 61.02],
+                ['łódzkie', 61.45],
+                ['małopolskie', 62.22],
+                ['mazowieckie', 61.41],
+                ['opolskie', 51.28],
+                ['podkarpackie', 61.53],
+                ['podlaskie', 58.49],
+                ['pomorskie', 62.83],
+                ['śląskie', 60.84],
+                ['świętokrzyskie', 58.85],
+                ['warmińsko-mazurskie', 58.13],
+                ['wielkopolskie', 66.54],
+                ['zachodniopomorskie', 60.14],
+            ]);
+            var formatter = new google.visualization.NumberFormat({
+                fractionDigits: 2,
+                suffix: '%'
+            });
+            formatter.format(data, 1);
+            var options = {
+                region: 'PL',
+                displayMode: 'regions',
+                resolution: 'provinces',
+                colorAxis: {colors: ['#ffe6e6', '#ff4d4d']},
+                datalessRegionColor: 'transparent',
+            };
+
+            var geochart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+            google.visualization.events.addListener(geochart, 'select', function () {
+                var selection = geochart.getSelection();
+                if (selection.length > 0) {
+                    window.open('./wojewodztwa/' + data.getValue(selection[0].row, 0) + '.html', '_self');
+                }
+            });
+
+            geochart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+
+<nav>
+    <ul class="topnav">
+        <li><a class="active" href="#home">Polska</a></li>
+        <li class="right"><a href="#about">Informacje</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <section>
+        <h2>Procentowa liczba głosów oddanych na kandydatów</h2>
+        <div id="piechart" style="width: inherit; height: 500px; margin: auto"></div>
+    </section>
+
+    <hr>
+
+    <section style="padding-bottom: 5em">
+        <h2>Wyniki poszczególnych kandydatów</h2>
+        <table>
+            <tr>
+                <th>Kandydat</th>
+                <th>Liczba głosów oddanych na kandydata</th>
+                <th>Procentowa liczba głosów oddanych na kandydata</th>
+            </tr>
+            <tr>
+                <td>GRABOWSKI Dariusz</td>
+                <td>89 002</td>
+                <td>0,51</td>
+            </tr>
+            <tr>
+                <td>IKONOWICZ Piotr</td>
+                <td>38 672</td>
+                <td>0,22</td>
+            </tr>
+            <tr>
+                <td>KALINOWSKI Jarosław</td>
+                <td>1 047 949</td>
+                <td>5,95</td>
+            </tr>
+            <tr>
+                <td>KORWIN-MIKKE Janusz</td>
+                <td>252 499</td>
+                <td>1,43</td>
+            </tr>
+            <tr>
+                <td>KRZAKLEWSKI Marian</td>
+                <td>2 739 621</td>
+                <td>15,57</td>
+            </tr>
+            <tr>
+                <td>KWAŚNIEWSKI Aleksander</td>
+                <td>9 485 224</td>
+                <td>53,90</td>
+            </tr>
+            <tr>
+                <td>LEPPER Andrzej</td>
+                <td>537 570</td>
+                <td>3,05</td>
+            </tr>
+            <tr>
+                <td>ŁOPUSZAŃSKI Jan</td>
+                <td>139 682</td>
+                <td>0,79</td>
+            </tr>
+            <tr>
+                <td>OLECHOWSKI Andrzej</td>
+                <td>3 044 141</td>
+                <td>17,30</td>
+            </tr>
+            <tr>
+                <td>PAWŁOWSKI Bogdan</td>
+                <td>17 164</td>
+                <td>0,10</td>
+            </tr>
+            <tr>
+                <td>WAŁĘSA Lech</td>
+                <td>178 590</td>
+                <td>1,01</td>
+            </tr>
+            <tr>
+                <td>WILECKI Tadeusz</td>
+                <td>28 805</td>
+                <td>0,16</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Frekwencja</h2>
+        <p> Kliknięcie na województwo spowoduje wyświetlenie szczegółowych wyników.</p>
+        <div id="regions_div" style="width: inherit; height: 500px; margin: auto"></div>
+        <ul class="flex-container">
+            <li class="flex-item"><a href="wojewodztwa/dolnośląskie.html">dolnośląskie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/kujawsko-pomorskie.html">kujawsko&#8209;pomorskie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/lubelskie.html">lubelskie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/lubuskie.html">lubuskie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/łódzkie.html">łódzkie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/małopolskie.html">małopolskie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/mazowieckie.html">mazowieckie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/opolskie.html">opolskie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/podkarpackie.html">podkarpackie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/podlaskie.html">podlaskie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/pomorskie.html">pomorskie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/śląskie.html">śląskie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/świętokrzyskie.html">świętokrzyskie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/warmińsko-mazurskie.html">warmińsko&#8209;mazurskie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/wielkopolskie.html">wielkopolskie</a></li>
+            <li class="flex-item"><a href="wojewodztwa/zachodniopomorskie.html">zachodniopomorskie</a></li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p class="footerParagraph">Wybory prezydenckie 2000 - projekt zaliczeniowy Aplikacje WWW 2017/18</p>
+    <p class="footerParagraph">- Marcin Byra, marcin.byra1@gmail.com</p>
+</footer>
+
+</body>
+
+</html>
